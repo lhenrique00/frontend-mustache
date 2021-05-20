@@ -1,26 +1,50 @@
 export default [
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/IMG_20210420_151038_437.jpg',
+    src: '/img/kleyton/photo4985758841228601633.jpg',
     label: 'Gallery Image 1'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/IMG_20210506_145555_185.jpg',
+    src: '/img/kleyton/photo4985758841228601634.jpg',
     label: 'Gallery Image 2'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/IMG_4916.JPEG',
+    src: '/img/kleyton/photo4985758841228601636.jpg',
     label: 'Gallery Image 3'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/Post+1.jpg',
+    src: '/img/kleyton/photo4985758841228601637.jpg',
     label: 'Gallery Image 4'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/Primeiro+post.jpg',
+    src: '/img/kleyton/photo4985758841228601638.jpg',
     label: 'Gallery Image 5'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/Segundo.jpg',
+    src: '/img/kleyton/photo4985758841228601640.jpg',
     label: 'Gallery Image 6'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601642.jpg',
+    label: 'Gallery Image 7'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601643.jpg',
+    label: 'Gallery Image 8'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601646.jpg',
+    label: 'Gallery Image 9'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601653.jpg',
+    label: 'Gallery Image 10'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601658.jpg',
+    label: 'Gallery Image 11'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601665.jpg',
+    label: 'Gallery Image 12'
   }
 ]

@@ -1,26 +1,34 @@
 export default [
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/IMG_20210420_151038_437.jpg',
+    src: '/img/alunos/photo4981224996441532798.jpg',
     label: 'Gallery Image 1'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/IMG_20210506_145555_185.jpg',
+    src: '/img/alunos/photo4981224996441532799.jpg',
     label: 'Gallery Image 2'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/IMG_4916.JPEG',
+    src: '/img/alunos/photo4981224996441532801.jpg',
     label: 'Gallery Image 3'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/Post+1.jpg',
+    src: '/img/alunos/photo4981224996441532802.jpg',
     label: 'Gallery Image 4'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/Primeiro+post.jpg',
+    src: '/img/alunos/photo4981224996441532803.jpg',
     label: 'Gallery Image 5'
   },
   {
-    src: 'https://mustache-barbearia.s3-sa-east-1.amazonaws.com/sobre/Segundo.jpg',
+    src: '/img/alunos/photo4981224996441532804.jpg',
     label: 'Gallery Image 6'
+  },
+  {
+    src: '/img/alunos/photo4981224996441532793.jpg',
+    label: 'Gallery Image 7'
+  },
+  {
+    src: '/img/alunos/photo4981224996441532796.jpg',
+    label: 'Gallery Image 8'
   }
 ]
