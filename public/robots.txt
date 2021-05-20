@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mustachebarbearia.com
+
+# Sitemaps
+Sitemap: https://mustachebarbearia.com/sitemap.xml

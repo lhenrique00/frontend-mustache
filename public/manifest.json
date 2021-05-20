@@ -1,0 +1,21 @@
+{
+  "name": "Mustache Barbearia",
+  "short_name": "Mustache Barbearia",
+  "icons": [
+    {
+      "src": "/img/mustache-barbearia.ico",
+      "type": "image/ico",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/mustache-barbearia.ico",
+      "type": "image/ico",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#fafafa",
+  "description": "Mustache Barbearia, além do corte!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#fafafa"
+}
