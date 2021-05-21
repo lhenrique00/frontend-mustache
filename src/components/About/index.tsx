@@ -148,7 +148,7 @@ const About = () => (
           </S.Column>
           <S.Column>
             <S.Card>
-              <S.CardImage src="https://mustache-barbearia.s3-sa-east-1.amazonaws.com/KLEYTON-COSTAS1.jpg" />
+              <S.CardImage src="/img/kleyton/photo4985758841228601668.jpg" />
             </S.Card>
           </S.Column>
         </S.Content>
