@@ -4,7 +4,6 @@ import media from 'styled-media-query'
 export const Content = styled.div`
   display: block;
   width: 100%;
-  height: 100%;
   ${media.greaterThan('medium')`
   `}
 `
