@@ -10,6 +10,7 @@ import Cursos from 'components/Cursos'
 import { NextSeo } from 'next-seo'
 import useWindowSize from 'hooks/useWindowSize'
 import { useRef, useCallback, useEffect } from 'react'
+import MediaMatch from 'components/MediaMatch'
 
 export type HomeTemplateProps = {
   gallery: GalleryImageProps[]
@@ -56,23 +57,46 @@ const Home = ({ gallery, galleryCurso }: HomeTemplateProps) => {
   }, [size.height])
 
   return (
-    <S.Wrapper ref={containerRef}>
-      <NextSeo
-        title="Mustache Barbearia"
-        description="Mustache barbearia, além do corte!"
-        canonical="https://mustachebarbearia.com"
-      />
-      <S.Content>
-        <Intro />
-        <Container>
-          <About />
-          <Cortes />
-          <Gallery items={gallery} />
-          <Cursos galleryCurso={galleryCurso} />
-          <Formulario />
-        </Container>
-      </S.Content>
-    </S.Wrapper>
+    <>
+      <MediaMatch greaterThan="medium">
+        <S.Wrapper ref={containerRef}>
+          <NextSeo
+            title="Mustache Barbearia"
+            description="Mustache barbearia, além do corte!"
+            canonical="https://mustachebarbearia.com"
+          />
+          <S.Content>
+            <Intro />
+            <Container>
+              <About />
+              <Cortes />
+              <Gallery items={gallery} />
+              <Cursos galleryCurso={galleryCurso} />
+              <Formulario />
+            </Container>
+          </S.Content>
+        </S.Wrapper>
+      </MediaMatch>
+      <MediaMatch lessThan="medium">
+        <S.Wrapper>
+          <NextSeo
+            title="Mustache Barbearia"
+            description="Mustache barbearia, além do corte!"
+            canonical="https://mustachebarbearia.com"
+          />
+          <S.Content>
+            <Intro />
+            <Container>
+              <About />
+              <Cortes />
+              <Gallery items={gallery} />
+              <Cursos galleryCurso={galleryCurso} />
+              <Formulario />
+            </Container>
+          </S.Content>
+        </S.Wrapper>
+      </MediaMatch>
+    </>
   )
 }
 
