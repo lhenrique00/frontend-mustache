@@ -8,24 +8,12 @@ export default [
     label: 'Gallery Image 2'
   },
   {
-    src: '/img/kleyton/photo4985758841228601636.jpg',
-    label: 'Gallery Image 3'
-  },
-  {
     src: '/img/kleyton/photo4985758841228601637.jpg',
     label: 'Gallery Image 4'
   },
   {
     src: '/img/kleyton/photo4985758841228601638.jpg',
     label: 'Gallery Image 5'
-  },
-  {
-    src: '/img/kleyton/photo4985758841228601640.jpg',
-    label: 'Gallery Image 6'
-  },
-  {
-    src: '/img/kleyton/photo4985758841228601642.jpg',
-    label: 'Gallery Image 7'
   },
   {
     src: '/img/kleyton/photo4985758841228601643.jpg',
