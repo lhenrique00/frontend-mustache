@@ -6,7 +6,7 @@ export const Content = styled.div`
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  margin-top: 10rem;
+  margin-top: 25rem;
   padding-bottom: 10rem;
   align-items: center;
 `

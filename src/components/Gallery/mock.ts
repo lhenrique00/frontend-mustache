@@ -34,5 +34,13 @@ export default [
   {
     src: '/img/kleyton/photo4985758841228601665.jpg',
     label: 'Gallery Image 12'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601641.jpg',
+    label: 'Gallery Image 12'
+  },
+  {
+    src: '/img/kleyton/photo4985758841228601645.jpg',
+    label: 'Gallery Image 12'
   }
 ]

@@ -1,10 +1,10 @@
 export default [
   {
-    src: '/img/alunos/photo4981224996441532798.jpg',
+    src: '/img/alunos/photo4981224996441532797.jpg',
     label: 'Gallery Image 1'
   },
   {
-    src: '/img/alunos/photo4981224996441532799.jpg',
+    src: '/img/alunos/photo4981224996441532798.jpg',
     label: 'Gallery Image 2'
   },
   {

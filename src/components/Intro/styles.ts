@@ -26,17 +26,17 @@ export const Image = styled.img`
   width: 100%;
   height: auto;
   object-fit: cover;
-  margin-top: -10rem;
+  margin-top: 0rem;
   ${media.greaterThan('medium')`
     width: 100%;
     height: auto;
-    margin-top: -120vh;
+    margin-top: -2vh;
   `}
 `
 
 export const Middle = styled.div`
   text-align: left;
-  background: linear-gradient(160deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 40%);
+  background: linear-gradient(160deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%);
   position: absolute;
   left: 0;
   right: 0;
@@ -46,7 +46,7 @@ export const Middle = styled.div`
   height: 100%;
   object-fit: cover;
   ${media.greaterThan('medium')`
-    background: linear-gradient(127deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%);
+    background: linear-gradient(150deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%);
   `}
 `
 export const Info = styled.div`
@@ -69,7 +69,7 @@ export const Links = styled.li`
 
 export const Heading = styled.h3`
   ${({ theme }) => css`
-    font-size: 12vw;
+    font-size: 10vw;
     line-height: ${theme.font.sizes.huge};
     font-weight: ${theme.font.normal};
     color: ${theme.colors.tertiary};
