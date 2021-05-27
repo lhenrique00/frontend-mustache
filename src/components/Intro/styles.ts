@@ -35,7 +35,7 @@ export const Image = styled.img`
 
 export const Middle = styled.div`
   text-align: left;
-  background: linear-gradient(160deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%);
+  background: linear-gradient(140deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 40%);
   position: absolute;
   left: 0;
   right: 0;
@@ -91,7 +91,7 @@ export const Item = styled.a`
     font-size: ${theme.font.sizes.xlarge};
     line-height: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.normal};
-    color: ${theme.colors.white};
+    color: ${theme.colors.tertiary};
     font-family: ${theme.font.familyTitle};
     letter-spacing: 0.2rem;
     text-decoration: none;
@@ -99,13 +99,13 @@ export const Item = styled.a`
     margin-right: 3rem;
     text-shadow: 10px 10px 15px #000000;
     &:hover {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid ${theme.colors.tertiary};
     }
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xxlarge};
       line-height: ${theme.font.sizes.xxlarge};
       font-weight: ${theme.font.light};
-      color: ${theme.colors.white};
+      color: ${theme.colors.tertiary};
     `}
   `}
 `
@@ -117,12 +117,17 @@ export const Description = styled.h3`
     font-weight: ${theme.font.light};
     color: ${theme.colors.white};
     font-family: ${theme.font.familyText};
+    text-shadow: 10px 10px 15px #000000;
+    width: 60%;
 
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xxlarge};
-      line-height: 5rem;
-      letter-spacing: 0.1rem;
-      font-weight: ${theme.font.light};
+      margin-top: 6rem;
+      margin-bottom: 3rem;
+      font-size: 3vw;
+      line-height: 4vw;
+      width: 70%;
+      letter-spacing: 0.3rem;
+      font-weight: ${theme.font.normal};
       color: ${theme.colors.white};
     `}
   `}
