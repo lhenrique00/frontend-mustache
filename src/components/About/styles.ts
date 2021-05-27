@@ -36,11 +36,12 @@ export const Button = styled.button`
     margin: 0.5rem;
     margin-left: 0rem;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-    border: 1px solid black;
+    border: 1px solid ${theme.colors.tertiary};
     border-radius: 10px;
-    background-color: ${theme.colors.white};
+    background-color: transparent;
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.normal};
+    color: ${theme.colors.tertiary};
     svg {
       width: 3rem;
     }
@@ -178,6 +179,7 @@ export const CardImage = styled.img`
   object-fit: cover;
   object-position: center;
   border: 2px solid white;
+  border-radius: 10px;
   ${media.greaterThan('medium')`
     margin: 0;
     width: 50rem;

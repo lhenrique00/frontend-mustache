@@ -75,6 +75,13 @@ export const Modal = styled.div<ModalProps>`
 
     ${isOpen && modalModifiers.open()}
     ${!isOpen && modalModifiers.close()}
+
+    ${media.greaterThan('medium')`
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      margin-top: 210vh;
+    `}
   `}
 `
 

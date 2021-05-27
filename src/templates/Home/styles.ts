@@ -2,16 +2,11 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  justify-content: space-between;
 `
 
 export const Content = styled.div`
   background-image: url('https://mustache-barbearia.s3-sa-east-1.amazonaws.com/fundo+2.jpg');
-  margin-top: 0;
-  flex: 1 0 auto;
 `
 
 export const Column = styled.div`
