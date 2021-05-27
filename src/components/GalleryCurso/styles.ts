@@ -96,17 +96,17 @@ export const NonSelectedImage = styled.div`
   align-items: center;
   padding-top: 2vh;
   background-color: none;
-  width: 35rem;
+  width: 100%;
   img {
     width: 5rem;
-    height: 8rem;
+    height: 12rem;
     object-fit: cover;
   }
   ${media.greaterThan('medium')`
-    width: 70rem;
+    width: 100%;
     img {
-      width: 12rem;
-      height: 12rem;
+      width: 20rem;
+      height: 20rem;
       object-fit: cover;
     }
   `}

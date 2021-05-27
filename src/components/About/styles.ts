@@ -42,6 +42,7 @@ export const Button = styled.button`
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.normal};
     color: ${theme.colors.tertiary};
+    transition: 0.3s;
     svg {
       width: 3rem;
     }
@@ -54,6 +55,10 @@ export const Button = styled.button`
       width: 13rem;
       cursor: pointer;
     `}
+    &:hover {
+      background-color: ${theme.colors.tertiary};
+      color: ${theme.colors.black};
+    }
   `}
 `
 

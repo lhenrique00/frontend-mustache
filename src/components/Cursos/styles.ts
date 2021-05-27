@@ -22,6 +22,7 @@ export const Social = styled.div`
 
 export const Sociais = styled.div`
   padding: 1rem;
+  text-align: center;
 `
 
 export const Button = styled.button`
@@ -55,7 +56,56 @@ export const Button = styled.button`
   `}
 `
 
+export const DivButton = styled.div`
+  text-align: center;
+  align-items: center;
+`
+
+export const ButtonInscrever = styled.button`
+  ${({ theme }) => css`
+    width: 30rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: ${theme.font.familyText};
+    letter-spacing: 0.2rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid ${theme.colors.tertiary};
+    border-radius: 10px;
+    background-color: transparent;
+    color: ${theme.colors.tertiary};
+    font-size: ${theme.font.sizes.medium};
+    font-weight: ${theme.font.normal};
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.tertiary};
+    }
+    ${media.greaterThan('medium')`
+      width: 40rem;
+      margin-bottom: 5rem;
+    `}
+  `}
+`
+
 export const Content = styled.div`
+  ${({ theme }) => css`
+    display: grid;
+    gap: ${theme.grid.gutter};
+    margin-top: ${theme.spacings.medium};
+    ${media.greaterThan('medium')`
+      grid-template-columns: repeat(3, 1fr);
+    `}
+  `}
+`
+
+export const Content2 = styled.div`
   ${({ theme }) => css`
     display: grid;
     gap: ${theme.grid.gutter};
@@ -112,6 +162,7 @@ export const SecondaryHeading = styled.h3`
     color: ${theme.colors.tertiary};
     font-family: ${theme.font.familyTitle};
     text-shadow: 10px 5px 15px #000000;
+    text-align: center;
     ${media.greaterThan('medium')`
       font-size: 3vw;
       line-height: ${theme.font.sizes.huge};
@@ -131,11 +182,28 @@ export const TertiaryHeading = styled.h3`
     color: ${theme.colors.secondary};
     font-family: ${theme.font.familyText};
     text-shadow: 10px 5px 15px #000000;
+    text-align: center;
     ${media.greaterThan('medium')`
       margin-top: 0;
       font-size: 1.7vw;
       line-height: 2vw;
       font-weight: ${theme.font.bold};
+    `}
+  `}
+`
+
+export const HeadingCurso = styled.h3`
+  ${({ theme }) => css`
+    font-size: 8vw;
+    margin-top: 7rem;
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.tertiary};
+    font-family: ${theme.font.familyTitle};
+    text-shadow: 10px 5px 15px #000000;
+    text-align: left;
+    ${media.greaterThan('medium')`
+      font-size: 2vw;
+      font-weight: ${theme.font.light};
     `}
   `}
 `
@@ -194,7 +262,6 @@ export const Description = styled.h3`
     margin-bottom: 1.5rem;
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xlarge};
-      text-indent: 1.5em;
       line-height: 3rem;
       letter-spacing: 0.1rem;
       font-weight: ${theme.font.light};
@@ -207,15 +274,18 @@ export const CursoItem = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.sizes.xlarge};
-    font-weight: ${theme.font.light};
+    font-weight: ${theme.font.normal};
     color: ${theme.colors.white};
     font-family: ${theme.font.familyText};
     margin-bottom: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid ${theme.colors.tertiary};
+    padding: 2rem;
+    border-radius: 10px;
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xlarge};
       line-height: 3rem;
       letter-spacing: 0.1rem;
-      font-weight: ${theme.font.light};
       color: ${theme.colors.white};
     `}
   `}
