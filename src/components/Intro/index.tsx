@@ -39,7 +39,7 @@ const Intro = () => {
         <S.Info>
           <S.Heading ref={title}>KLEYTON MARTINS</S.Heading>
           <S.Description ref={description}>
-            <b>Fundador da Mustache Barbearia.</b> <br />
+            Fundador da Mustache Barbearia. <br />
             Barbeiro profissional
           </S.Description>
           <S.Links ref={links}>
