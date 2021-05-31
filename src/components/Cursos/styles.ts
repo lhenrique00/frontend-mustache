@@ -4,6 +4,7 @@ import media from 'styled-media-query'
 export const SectionCurso = styled.section`
   ${({ theme }) => css`
     margin: 0 calc(-${theme.grid.gutter} / 2) ${theme.spacings.large};
+    margin-top: 15rem;
     ${media.greaterThan('medium')`
       margin-bottom: ${theme.spacings.large};
       position: relative;
@@ -157,6 +158,27 @@ export const Heading = styled.h3`
 export const SecondaryHeading = styled.h3`
   ${({ theme }) => css`
     font-size: 8vw;
+    margin-top: 10rem;
+    line-height: ${theme.font.sizes.huge};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.tertiary};
+    font-family: ${theme.font.familyTitle};
+    text-shadow: 10px 5px 15px #000000;
+    text-align: center;
+    ${media.greaterThan('medium')`
+      margin-top: 15rem;
+      font-size: 3vw;
+      line-height: ${theme.font.sizes.huge};
+      font-weight: ${theme.font.light};
+    `}
+  `}
+`
+
+export const Price = styled.h3`
+  ${({ theme }) => css`
+    font-size: 8vw;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
     line-height: ${theme.font.sizes.huge};
     font-weight: ${theme.font.normal};
     color: ${theme.colors.tertiary};
@@ -194,7 +216,7 @@ export const TertiaryHeading = styled.h3`
 
 export const HeadingCurso = styled.h3`
   ${({ theme }) => css`
-    font-size: 8vw;
+    font-size: 7.5vw;
     margin-top: 7rem;
     font-weight: ${theme.font.normal};
     color: ${theme.colors.tertiary};
@@ -270,6 +292,27 @@ export const Description = styled.h3`
   `}
 `
 
+export const DescriptionCurso = styled.h3`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    line-height: ${theme.font.sizes.xlarge};
+    font-weight: ${theme.font.light};
+    color: ${theme.colors.white};
+    font-family: ${theme.font.familyText};
+    margin-bottom: 1.5rem;
+    text-align: center;
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+      line-height: 3rem;
+      letter-spacing: 0.1rem;
+      font-weight: ${theme.font.light};
+      color: ${theme.colors.white};
+      margin-left: 30rem;
+      margin-right: 30rem;
+    `}
+  `}
+`
+
 export const CursoItem = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
@@ -277,12 +320,13 @@ export const CursoItem = styled.h3`
     font-weight: ${theme.font.normal};
     color: ${theme.colors.white};
     font-family: ${theme.font.familyText};
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.2rem;
     background-color: rgba(0, 0, 0, 0.8);
     border: 1px solid ${theme.colors.tertiary};
     padding: 2rem;
     border-radius: 10px;
     ${media.greaterThan('medium')`
+      margin-bottom: 1.5rem;
       font-size: ${theme.font.sizes.xlarge};
       line-height: 3rem;
       letter-spacing: 0.1rem;

@@ -6,9 +6,12 @@ export const Content = styled.div`
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  margin-top: 25rem;
+  margin-top: 15rem;
   padding-bottom: 10rem;
   align-items: center;
+  ${media.greaterThan('medium')`
+    argin-top: 25rem;
+  `}
 `
 
 export const Column = styled.div`
