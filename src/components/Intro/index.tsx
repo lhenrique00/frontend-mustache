@@ -34,18 +34,11 @@ const Intro = () => {
 
   return (
     <S.Content>
-      <S.Image src="/img/kleyton.jpg" />
+      <S.Image src="/img/Fundo.png" />
+      <S.ImageCorte src="/img/Corte.png" />
       <S.Middle>
         <S.Info>
-          <S.Heading ref={title}>KLEYTON MARTINS</S.Heading>
-          <S.Description ref={description}>
-            Fundador da Mustache Barbearia. <br />
-            Barbeiro profissional
-          </S.Description>
-          <S.Links ref={links}>
-            <S.Item href="#sobre">Sobre</S.Item>
-            <S.Item href="#cursos">Cursos</S.Item>
-          </S.Links>
+          <S.Heading ref={description}>muito mais que um corte</S.Heading>
         </S.Info>
       </S.Middle>
     </S.Content>

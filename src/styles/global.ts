@@ -9,28 +9,29 @@ const GlobalStyles = createGlobalStyle`
         url('/fonts/bebas-neue-v2-latin-regular.woff2') format('woff2');
   }
 
+  /* inter-300 - latin */
   @font-face {
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-        url('/fonts/work-sans-v9-latin-regular.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Work Sans';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 300;
     src: local(''),
-        url('/fonts/work-sans-v9-latin-300.woff2') format('woff2');
+        url('/fonts/inter-v3-latin-300.woff2') format('woff2');
   }
-
+  /* inter-regular - latin */
   @font-face {
-    font-family: 'Work Sans';
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('/fonts/inter-v3-latin-regular.woff2') format('woff2');
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     src: local(''),
-        url('/fonts/work-sans-v9-latin-700.woff2') format('woff2');
+        url('/fonts/inter-v3-latin-700.woff2') format('woff2');
   }
 
   * {

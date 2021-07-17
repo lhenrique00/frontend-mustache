@@ -1,65 +1,219 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const SectionCurso = styled.section`
+export const SectionService = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+`
+
+export const SectionCurse = styled.div`
+  height: 150vh;
+  align-items: center;
+  text-align: center;
+  margin-top: 10vh;
+`
+
+export const NonSelectedService = styled.div`
+  position: relative;
+  display: inline-flex;
+  margin: auto;
+  margin-top: 10rem;
+  align-items: center;
+  text-align: center;
+`
+
+export const FooterCurso = styled.div`
+  display: inline-flex;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+`
+
+export const Aulas = styled.div`
   ${({ theme }) => css`
-    margin: 0 calc(-${theme.grid.gutter} / 2) ${theme.spacings.large};
-    margin-top: 15rem;
+    border: 1px solid ${theme.colors.tertiary};
+    width: 50rem;
+    border-radius: 20px 0px 0px 20px;
+  `}
+`
+
+export const Localizacao = styled.div`
+  ${({ theme }) => css`
+    border: 1px solid ${theme.colors.tertiary};
+    width: 50rem;
+    border-radius: 0px 20px 20px 0px;
+  `}
+`
+
+export const SelectedService = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const Image = styled.img`
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 15px;
+
+  ${media.greaterThan('medium')`
+    height: 100%;
+    width: 100%;
+  `}
+`
+
+export const Info = styled.div`
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 2rem;
+  margin-top: 5rem;
+`
+
+export const Title = styled.h3`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xlarge};
+    font-weight: ${theme.font.normal};
+    padding-bottom: 5rem;
+    color: ${theme.colors.tertiary};
+    font-family: ${theme.font.familyTitle};
+    border-bottom: 1px solid white;
     ${media.greaterThan('medium')`
-      margin-bottom: ${theme.spacings.large};
-      position: relative;
-      z-index: ${theme.layers.base};
-      margin-top: 25rem;
+      font-size: ${theme.font.sizes.huge};
+      line-height: ${theme.font.sizes.large};
+      font-weight: ${theme.font.normal};
     `}
   `}
 `
 
-export const Social = styled.div`
-  grid-column: 1 / span 12;
-  grid-row: 1 / 1;
-  display: inline-flex;
-  flex-wrap: nowrap;
-`
-
-export const Sociais = styled.div`
-  padding: 1rem;
-  text-align: center;
-`
-
-export const Button = styled.button`
+export const Heading = styled.h3`
   ${({ theme }) => css`
-    width: 13rem;
-    height: 5rem;
+    font-size: 6vw;
+    line-height: ${theme.font.sizes.huge};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.tertiary};
+    font-family: ${theme.font.familyTitle};
+    text-shadow: 10px 5px 15px #000000;
+    margin-bottom: 1rem;
+    ${media.greaterThan('medium')`
+      font-size: 4vw;
+      line-height: ${theme.font.sizes.huge};
+      font-weight: ${theme.font.light};
+    `}
+  `}
+`
+
+export const ButtonText = styled.h3`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    line-height: ${theme.font.sizes.small};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.white};
+    text-shadow: 0px 5px 10px #000000;
+    margin: auto;
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.medium};
+      line-height: ${theme.font.sizes.large};
+      font-weight: ${theme.font.bold};
+    `}
+  `}
+`
+
+export const Description = styled.h3`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    line-height: ${theme.font.sizes.small};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.white};
+    font-family: ${theme.font.familyText};
+    margin: auto;
+    margin-top: 5rem;
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xxlarge};
+      line-height: ${theme.font.sizes.large};
+      font-weight: ${theme.font.bold};
+    `}
+  `}
+`
+
+export const CursoItems = styled.div`
+  ${({ theme }) => css`
+    width: auto;
+    background-color: none;
+    border: 1px solid ${theme.colors.tertiary};
+    margin: 1rem;
     display: inline-flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin: 0.5rem;
-    margin-left: 0rem;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-    border: 1px solid black;
+    padding: 1rem;
     border-radius: 10px;
-    background-color: ${theme.colors.white};
+    text-align: center;
+    align-items: center;
+  `}
+`
+
+export const CursoItemTitle = styled.div`
+  ${({ theme }) => css`
+    margin: auto;
+    color: ${theme.colors.tertiary};
+  `}
+`
+
+export const SubDescription = styled.h3`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    line-height: ${theme.font.sizes.small};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.white};
+    font-family: ${theme.font.familyText};
+    margin: auto;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+      line-height: ${theme.font.sizes.large};
+      font-weight: ${theme.font.normal};
+    `}
+  `}
+`
+
+export const Text = styled.h3`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xlarge};
+    line-height: ${theme.font.sizes.xxlarge};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.white};
+    font-family: ${theme.font.familyText};
+    letter-spacing: 0.1rem;
+    padding: 2rem;
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.small};
+    `}
+  `}
+`
+
+export const Button = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    width: 25rem;
+    flex-wrap: wrap;
+    margin: 3rem;
+    margin-right: 10rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 2rem;
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.normal};
-    svg {
-      width: 3rem;
-    }
-    p {
-      margin-top: 0.2rem;
-      margin-left: 0.5rem;
-      font-family: ${theme.font.familyText};
-    }
-    ${media.greaterThan('medium')`
-      width: 13rem;
-      cursor: pointer;
+    font-family: ${theme.font.familyText};
+    cursor: pointer;
+
+    ${media.lessThan('medium')`
+      margin: auto;
+      margin-bottom: 2rem;
     `}
   `}
-`
-
-export const DivButton = styled.div`
-  text-align: center;
-  align-items: center;
 `
 
 export const ButtonInscrever = styled.button`
@@ -73,7 +227,7 @@ export const ButtonInscrever = styled.button`
     font-family: ${theme.font.familyText};
     letter-spacing: 0.2rem;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
     border: 1px solid ${theme.colors.tertiary};
@@ -92,287 +246,5 @@ export const ButtonInscrever = styled.button`
       width: 40rem;
       margin-bottom: 5rem;
     `}
-  `}
-`
-
-export const Content = styled.div`
-  ${({ theme }) => css`
-    display: grid;
-    gap: ${theme.grid.gutter};
-    margin-top: ${theme.spacings.medium};
-    ${media.greaterThan('medium')`
-      grid-template-columns: repeat(3, 1fr);
-    `}
-  `}
-`
-
-export const Content2 = styled.div`
-  ${({ theme }) => css`
-    display: grid;
-    gap: ${theme.grid.gutter};
-    margin-top: ${theme.spacings.medium};
-
-    ${media.greaterThan('medium')`
-      grid-template-columns: repeat(2, 1fr);
-    `}
-  `}
-`
-
-export const Column = styled.div`
-  ${({ theme }) => css`
-    a,
-    span {
-      display: block;
-      color: ${theme.colors.gray};
-      text-decoration: none;
-      margin-bottom: ${theme.spacings.xxsmall};
-      font-size: ${theme.font.sizes.small};
-    }
-    a {
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  `}
-`
-
-export const Heading = styled.h3`
-  ${({ theme }) => css`
-    margin-top: 10rem;
-    font-size: 10vw;
-    line-height: ${theme.font.sizes.huge};
-    font-weight: ${theme.font.normal};
-    color: ${theme.colors.tertiary};
-    font-family: ${theme.font.familyTitle};
-    text-shadow: 10px 5px 15px #000000;
-    ${media.greaterThan('medium')`
-      font-size: 4vw;
-      line-height: ${theme.font.sizes.huge};
-      font-weight: ${theme.font.light};
-    `}
-  `}
-`
-
-export const SecondaryHeading = styled.h3`
-  ${({ theme }) => css`
-    font-size: 8vw;
-    margin-top: 10rem;
-    line-height: ${theme.font.sizes.huge};
-    font-weight: ${theme.font.normal};
-    color: ${theme.colors.tertiary};
-    font-family: ${theme.font.familyTitle};
-    text-shadow: 10px 5px 15px #000000;
-    text-align: center;
-    ${media.greaterThan('medium')`
-      margin-top: 15rem;
-      font-size: 3vw;
-      line-height: ${theme.font.sizes.huge};
-      font-weight: ${theme.font.light};
-    `}
-  `}
-`
-
-export const Price = styled.h3`
-  ${({ theme }) => css`
-    font-size: 8vw;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-    line-height: ${theme.font.sizes.huge};
-    font-weight: ${theme.font.normal};
-    color: ${theme.colors.tertiary};
-    font-family: ${theme.font.familyTitle};
-    text-shadow: 10px 5px 15px #000000;
-    text-align: center;
-    ${media.greaterThan('medium')`
-      font-size: 3vw;
-      line-height: ${theme.font.sizes.huge};
-      font-weight: ${theme.font.light};
-    `}
-  `}
-`
-
-export const TertiaryHeading = styled.h3`
-  ${({ theme }) => css`
-    font-size: 4vw;
-    text-transform: uppercase;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    line-height: ${theme.font.sizes.huge};
-    font-weight: ${theme.font.bold};
-    color: ${theme.colors.secondary};
-    font-family: ${theme.font.familyText};
-    text-shadow: 10px 5px 15px #000000;
-    text-align: center;
-    ${media.greaterThan('medium')`
-      margin-top: 0;
-      font-size: 1.7vw;
-      line-height: 2vw;
-      font-weight: ${theme.font.bold};
-    `}
-  `}
-`
-
-export const HeadingCurso = styled.h3`
-  ${({ theme }) => css`
-    font-size: 7.5vw;
-    margin-top: 7rem;
-    font-weight: ${theme.font.normal};
-    color: ${theme.colors.tertiary};
-    font-family: ${theme.font.familyTitle};
-    text-shadow: 10px 5px 15px #000000;
-    text-align: left;
-    ${media.greaterThan('medium')`
-      font-size: 2vw;
-      font-weight: ${theme.font.light};
-    `}
-  `}
-`
-
-export const GalleryHeading = styled.h3`
-  ${({ theme }) => css`
-    text-align: center;
-    margin-top: 11rem;
-    font-size: 6vw;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    line-height: ${theme.font.sizes.huge};
-    font-weight: ${theme.font.bold};
-    color: ${theme.colors.secondary};
-    font-family: ${theme.font.familyText};
-    text-shadow: 10px 5px 15px #000000;
-    ${media.greaterThan('medium')`
-      text-align: center;
-      font-size: 1.7vw;
-      line-height: 2vw;
-      font-weight: ${theme.font.bold};
-    `}
-  `}
-`
-
-export const Card = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-export const HeadSocial = styled.h3`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xlarge};
-    line-height: ${theme.font.sizes.xlarge};
-    font-weight: ${theme.font.normal};
-    color: ${theme.colors.white};
-    font-family: ${theme.font.familyTitle};
-
-    ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xxlarge};
-      line-height: 5rem;
-      letter-spacing: 0.1rem;
-      font-weight: ${theme.font.light};
-      color: ${theme.colors.white};
-    `}
-  `}
-`
-
-export const Description = styled.h3`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.xlarge};
-    font-weight: ${theme.font.light};
-    color: ${theme.colors.white};
-    font-family: ${theme.font.familyText};
-    margin-bottom: 1.5rem;
-    ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xlarge};
-      line-height: 3rem;
-      letter-spacing: 0.1rem;
-      font-weight: ${theme.font.light};
-      color: ${theme.colors.white};
-    `}
-  `}
-`
-
-export const DescriptionCurso = styled.h3`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.xlarge};
-    font-weight: ${theme.font.light};
-    color: ${theme.colors.white};
-    font-family: ${theme.font.familyText};
-    margin-bottom: 1.5rem;
-    text-align: center;
-    ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xlarge};
-      line-height: 3rem;
-      letter-spacing: 0.1rem;
-      font-weight: ${theme.font.light};
-      color: ${theme.colors.white};
-      margin-left: 30rem;
-      margin-right: 30rem;
-    `}
-  `}
-`
-
-export const CursoItem = styled.h3`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.xlarge};
-    font-weight: ${theme.font.normal};
-    color: ${theme.colors.white};
-    font-family: ${theme.font.familyText};
-    margin-bottom: 0.2rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 1px solid ${theme.colors.tertiary};
-    padding: 2rem;
-    border-radius: 10px;
-    ${media.greaterThan('medium')`
-      margin-bottom: 1.5rem;
-      font-size: ${theme.font.sizes.xlarge};
-      line-height: 3rem;
-      letter-spacing: 0.1rem;
-      color: ${theme.colors.white};
-    `}
-  `}
-`
-
-export const TextoIntro = styled.section`
-  ${({ theme }) => css`
-    padding: 1.5rem;
-    ${media.greaterThan('medium')`
-      position: relative;
-      z-index: ${theme.layers.base};
-      padding-right: 10vh;
-      padding-top: 10vh;
-      padding-bottom: 25vh;
-    `}
-  `}
-`
-
-export const Divider = styled.hr`
-  ${({ theme }) => css`
-    margin: ${theme.spacings.xsmall} auto ${theme.spacings.xsmall};
-    height: 0.1rem;
-    border: 1px solid white;
-
-    ${media.greaterThan('medium')`
-      margin: calc(${theme.spacings.small}  0.1) auto ${theme.spacings.small};
-    `}
-  `}
-`
-
-export const CardImage = styled.img`
-  margin: auto;
-  width: 30rem;
-  height: 25rem;
-  object-fit: cover;
-  object-position: center;
-  border: 2px solid white;
-  ${media.greaterThan('medium')`
-    margin: 0;
-    width: 50rem;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    border: 2px solid white;
   `}
 `

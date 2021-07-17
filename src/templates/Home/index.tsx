@@ -5,17 +5,18 @@ import { Container } from 'components/Container'
 import Formulario from 'components/Formulario'
 import Cortes from 'components/Cortes'
 import Gallery, { GalleryImageProps } from 'components/Gallery'
-import { GalleryCursoImageProps } from 'components/GalleryCurso'
 import Cursos from 'components/Cursos'
+import { CursosInfoProps } from 'components/Cursos'
 import { NextSeo } from 'next-seo'
 import MediaMatch from 'components/MediaMatch'
+import Menu from 'components/Menu'
 
 export type HomeTemplateProps = {
   gallery: GalleryImageProps[]
-  galleryCurso: GalleryCursoImageProps[]
+  curso: CursosInfoProps[]
 }
 
-const Home = ({ gallery, galleryCurso }: HomeTemplateProps) => {
+const Home = ({ gallery, curso }: HomeTemplateProps) => {
   return (
     <>
       <MediaMatch greaterThan="medium">
@@ -26,12 +27,15 @@ const Home = ({ gallery, galleryCurso }: HomeTemplateProps) => {
             canonical="https://mustachebarbearia.com"
           />
           <S.Content>
+            <Container>
+              <Menu />
+            </Container>
             <Intro />
             <Container>
-              <About />
+              <Cursos items={curso} />
               <Cortes />
               <Gallery items={gallery} />
-              <Cursos galleryCurso={galleryCurso} />
+              <About />
               <Formulario />
             </Container>
           </S.Content>
@@ -45,12 +49,15 @@ const Home = ({ gallery, galleryCurso }: HomeTemplateProps) => {
             canonical="https://mustachebarbearia.com"
           />
           <S.Content>
+            <Container>
+              <Menu />
+            </Container>
             <Intro />
             <Container>
               <About />
               <Cortes />
               <Gallery items={gallery} />
-              <Cursos galleryCurso={galleryCurso} />
+              <Cursos items={curso} />
               <Formulario />
             </Container>
           </S.Content>

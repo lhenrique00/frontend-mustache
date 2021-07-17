@@ -8,11 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "test": "jest --maxWorkers=50%",
-    "test:watch": "jest --watch --maxWorkers=25%",
-    "test:ci": "jest --runInBand",
-    "generate": "yarn plop --plopfile generators/plopfile.js",
-    "postinstall": "husky install"
+    "generate": "yarn plop --plopfile generators/plopfile.js"
   },
   "lint-staged": {
     "src/**/*": [

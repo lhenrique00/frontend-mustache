@@ -7,7 +7,7 @@ export default {
     radius: '0.4rem'
   },
   font: {
-    familyText: 'Work Sans',
+    familyText: 'Inter',
     familyTitle: 'Bebas Neue',
     light: 300,
     normal: 400,
@@ -24,12 +24,12 @@ export default {
   },
   colors: {
     primary: '#181818',
-    secondary: '#FFFFFF',
+    secondary: '#FAFAFA',
     tertiary: '#E9A31B',
     mainBg: '#181818',
-    white: '#FFFFFF',
+    white: '#FAFAFA',
     lightBg: '#F2F2F2',
-    black: '#030517',
+    black: '#181818',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
     darkGray: '#2E2F42',

@@ -26,10 +26,24 @@ export const Image = styled.img`
   height: auto;
   object-fit: cover;
   margin-top: 0rem;
+  opacity: 0.5;
   ${media.greaterThan('medium')`
     width: 100%;
-    height: auto;
-    margin-top: -2vh;
+    height: 102vh;
+    margin-top: -9vh;
+  `}
+`
+
+export const ImageCorte = styled.img`
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  right: 20rem;
+  ${media.greaterThan('medium')`
+    width: 65%;
+    z-index: 3;
   `}
 `
 
@@ -76,9 +90,13 @@ export const Heading = styled.h3`
     text-shadow: 10px 5px 15px #000000;
     margin-bottom: 2rem;
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.huge};
+      font-size: 8.3vw;
       line-height: ${theme.font.sizes.huge};
       font-weight: ${theme.font.light};
+      position: absolute;
+      top: 30rem;
+      right: 32rem;
+      z-index: 2;
     `}
   `}
 `

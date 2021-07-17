@@ -6,7 +6,9 @@ export const Wrapper = styled.main`
 `
 
 export const Content = styled.div`
-  background-image: url('https://mustache-barbearia.s3-sa-east-1.amazonaws.com/fundo+2.jpg');
+  ${({ theme }) => css`
+    background-color: ${theme.colors.mainBg};
+  `}
 `
 
 export const Column = styled.div`
