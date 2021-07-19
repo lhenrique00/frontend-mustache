@@ -19,7 +19,9 @@ const Menu = () => {
       </MediaMatch>
 
       <S.LogoWrapper>
-        <S.Logo src="https://mustache-barbearia.s3.sa-east-1.amazonaws.com/LOGO-BARBERSCHOOL-BRANCA.png" />
+        <Link href="/">
+          <S.Logo src="https://mustache-barbearia.s3.sa-east-1.amazonaws.com/LOGO-BARBERSCHOOL-BRANCA.png" />
+        </Link>
       </S.LogoWrapper>
 
       <S.MenuGroup>

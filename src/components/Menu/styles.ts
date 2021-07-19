@@ -22,6 +22,7 @@ export const LogoWrapper = styled.div`
 export const Logo = styled.img`
   width: 25rem;
   height: auto;
+  cursor: pointer;
   ${media.lessThan('medium')`
     width: 17rem;
   `}
