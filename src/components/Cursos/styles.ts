@@ -1,17 +1,31 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const SectionService = styled.div`
+export const SectionCurse = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin-top: 15rem;
+  padding-bottom: 10rem;
   align-items: center;
-  text-align: center;
+  ${media.greaterThan('medium')`
+    margin-top: 25rem;
+  `}
 `
 
-export const SectionCurse = styled.div`
-  height: 150vh;
-  align-items: center;
+export const SectionService = styled.div`
+  width: 100%;
+  height: 100%;
   text-align: center;
-  margin-top: 10vh;
+  margin: auto;
+`
+
+export const Column = styled.div`
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: auto;
 `
 
 export const NonSelectedService = styled.div`
@@ -23,10 +37,29 @@ export const NonSelectedService = styled.div`
   text-align: center;
 `
 
+export const SelectedService = styled.div`
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+`
+
+export const Info = styled.div`
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: auto;
+`
+
 export const FooterCurso = styled.div`
   display: inline-flex;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  width: 100%;
 `
 
 export const Aulas = styled.div`
@@ -45,13 +78,6 @@ export const Localizacao = styled.div`
   `}
 `
 
-export const SelectedService = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
 export const Image = styled.img`
   display: block;
   left: 0;
@@ -64,14 +90,6 @@ export const Image = styled.img`
     height: 100%;
     width: 100%;
   `}
-`
-
-export const Info = styled.div`
-  align-items: center;
-  text-align: center;
-  margin: auto;
-  padding: 2rem;
-  margin-top: 5rem;
 `
 
 export const Title = styled.h3`
@@ -142,15 +160,19 @@ export const Description = styled.h3`
 
 export const CursoItems = styled.div`
   ${({ theme }) => css`
-    width: auto;
     background-color: none;
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid ${theme.colors.tertiary};
     margin: 1rem;
-    display: inline-flex;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
     align-items: center;
+    ${media.greaterThan('medium')`
+      width: auto;
+      display: inline-flex;
+    `}
   `}
 `
 
@@ -163,8 +185,9 @@ export const CursoItemTitle = styled.div`
 
 export const SubDescription = styled.h3`
   ${({ theme }) => css`
+    width: 30%;
     font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.small};
+    line-height: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.normal};
     color: ${theme.colors.white};
     font-family: ${theme.font.familyText};
@@ -172,6 +195,7 @@ export const SubDescription = styled.h3`
     margin-top: 7rem;
     margin-bottom: 5rem;
     ${media.greaterThan('medium')`
+      width: auto;
       font-size: ${theme.font.sizes.xlarge};
       line-height: ${theme.font.sizes.large};
       font-weight: ${theme.font.normal};
@@ -187,7 +211,7 @@ export const Text = styled.h3`
     color: ${theme.colors.white};
     font-family: ${theme.font.familyText};
     letter-spacing: 0.1rem;
-    padding: 2rem;
+    padding: 1rem;
     ${media.lessThan('medium')`
       font-size: ${theme.font.sizes.small};
     `}
@@ -212,6 +236,7 @@ export const Button = styled.div`
     ${media.lessThan('medium')`
       margin: auto;
       margin-bottom: 2rem;
+      width: 15rem;
     `}
   `}
 `
@@ -232,10 +257,10 @@ export const ButtonInscrever = styled.button`
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
     border: 1px solid ${theme.colors.tertiary};
     border-radius: 10px;
-    background-color: transparent;
-    color: ${theme.colors.tertiary};
+    background-color: ${theme.colors.tertiary};
+    color: ${theme.colors.black};
     font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.normal};
+    font-weight: ${theme.font.bold};
     cursor: pointer;
     transition: 0.3s;
     &:hover {

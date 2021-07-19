@@ -23,14 +23,20 @@ export const Divider = styled.hr`
 export const Image = styled.img`
   display: block;
   width: 100%;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
-  margin-top: 0rem;
+  margin-top: -11vh;
   opacity: 0.5;
+  object-fit: cover;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
   ${media.greaterThan('medium')`
     width: 100%;
     height: 102vh;
-    margin-top: -9vh;
+    margin-top: -12vh;
   `}
 `
 
@@ -39,11 +45,21 @@ export const ImageCorte = styled.img`
   position: absolute;
   width: 100%;
   height: auto;
-  top: 0;
+  top: 20rem;
+  object-fit: cover;
+  left: 0;
   right: 20rem;
+  z-index: 3;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
   ${media.greaterThan('medium')`
-    width: 65%;
+    width: 40%;
     z-index: 3;
+    top: 20rem;
+    left: 25%;
   `}
 `
 
@@ -82,13 +98,16 @@ export const Links = styled.li`
 
 export const Heading = styled.h3`
   ${({ theme }) => css`
-    font-size: 10vw;
-    line-height: ${theme.font.sizes.huge};
+    font-size: 16vw;
+    line-height: 22vw;
     font-weight: ${theme.font.normal};
     color: ${theme.colors.tertiary};
     font-family: ${theme.font.familyTitle};
     text-shadow: 10px 5px 15px #000000;
     margin-bottom: 2rem;
+    position: absolute;
+    top: 12rem;
+    z-index: 2;
     ${media.greaterThan('medium')`
       font-size: 8.3vw;
       line-height: ${theme.font.sizes.huge};

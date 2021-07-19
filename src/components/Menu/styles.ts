@@ -14,14 +14,22 @@ export const Wrapper = styled.menu`
 export const LogoWrapper = styled.div`
   ${media.lessThan('medium')`
     position: absolute;
-    left: 44%;
+    left: 50%;
     transform: translateX(-50%);
+  `}
+`
+
+export const Logo = styled.img`
+  width: 25rem;
+  height: auto;
+  ${media.lessThan('medium')`
+    width: 17rem;
   `}
 `
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.black};
+    color: ${theme.colors.white};
     cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;

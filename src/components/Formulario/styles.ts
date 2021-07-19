@@ -10,7 +10,7 @@ export const Content = styled.div`
   padding-bottom: 10rem;
   align-items: center;
   ${media.greaterThan('medium')`
-    argin-top: 25rem;
+    margin-top: 25rem;
   `}
 `
 

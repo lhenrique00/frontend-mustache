@@ -6,13 +6,23 @@ export type CursosInfoProps = {
   description: string
   subdescription: string
   curseitems: CursosItemProps[]
-  classsesitems: string
-  localizationitems: string
+  classsesitems: ClassesItemProps[]
+  localizationitems: LocalizatoinItemProps[]
   id: string
   preco: string
 }
 
 export type CursosItemProps = {
+  title: string
+  id: string
+}
+
+export type ClassesItemProps = {
+  title: string
+  id: string
+}
+
+export type LocalizatoinItemProps = {
   title: string
   id: string
 }
@@ -32,9 +42,9 @@ const Cursos = ({ items }: CursosProps) => {
   )
   const [selectedPreco, setSelectedPreco] = useState(items[0].preco)
 
-  const initialValue = items[0].curseitems
-
-  const [selectedCurseitems, setSelectedCurseitems] = useState(initialValue)
+  const [selectedCurseitems, setSelectedCurseitems] = useState(
+    items[0].curseitems
+  )
 
   const [selectedClasssesitems, setSelectedClasssesitems] = useState(
     items[0].classsesitems
@@ -80,21 +90,33 @@ const Cursos = ({ items }: CursosProps) => {
             <S.Heading>{selectedTitle}</S.Heading>
             <S.Description>{selectedDescription}</S.Description>
             <S.SubDescription>{selectedSubdescription}</S.SubDescription>
-            <S.Text>
+            <div>
               {selectedCurseitems.map((item) => (
                 <S.CursoItems key={item.id}>
                   <S.CursoItemTitle>{item.title}</S.CursoItemTitle>
                 </S.CursoItems>
               ))}
-            </S.Text>
+            </div>
             <S.FooterCurso>
               <S.Aulas>
                 <S.Text>Aulas</S.Text>
-                <S.Text>{selectedClasssesitems}</S.Text>
+                <S.Text>
+                  {selectedClasssesitems.map((item) => (
+                    <>
+                      <S.Text>{item.title}</S.Text>
+                    </>
+                  ))}
+                </S.Text>
               </S.Aulas>
               <S.Localizacao>
                 <S.Text>Localização</S.Text>
-                <S.Text>{selectedLocalizationitems}</S.Text>
+                <S.Text>
+                  {selectedLocalizationitems.map((item) => (
+                    <>
+                      <S.Text>{item.title}</S.Text>
+                    </>
+                  ))}
+                </S.Text>
               </S.Localizacao>
             </S.FooterCurso>
             <S.Heading>{selectedPreco}</S.Heading>

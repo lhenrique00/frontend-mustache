@@ -7,24 +7,25 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Intro = () => {
   const description = useRef<HTMLDivElement>(null)
-  const title = useRef<HTMLDivElement>(null)
-  const links = useRef<HTMLLIElement>(null)
+  const firstImage = useRef<HTMLImageElement>(null)
+  const secondImage = useRef<HTMLImageElement>(null)
 
   const initScrollAnimations = useCallback(() => {
-    gsap.from(title.current!, {
+    gsap.from(firstImage.current!, {
       opacity: 0,
       duration: 2,
       delay: 0.5
     })
     gsap.from(description.current!, {
-      opacity: 0,
-      duration: 2,
-      delay: 1
+      autoAlpha: 0,
+      y: 100,
+      duration: 1.5,
+      delay: 0.5
     })
-    gsap.from(links.current!, {
-      opacity: 0,
+    gsap.from(secondImage.current!, {
+      autoAlpha: 0,
       duration: 2,
-      delay: 1.5
+      delay: 2
     })
   }, [])
 
@@ -34,8 +35,8 @@ const Intro = () => {
 
   return (
     <S.Content>
-      <S.Image src="/img/Fundo.png" />
-      <S.ImageCorte src="/img/Corte.png" />
+      <S.Image src="/img/Fundo.png" ref={firstImage} />
+      <S.ImageCorte src="/img/Corte.png" ref={secondImage} />
       <S.Middle>
         <S.Info>
           <S.Heading ref={description}>muito mais que um corte</S.Heading>

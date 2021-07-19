@@ -52,8 +52,34 @@ export default [
         title: 'como conquistar seus clientes'
       }
     ],
-    classsesitems: 'Aulas Items',
-    localizationitems: 'Localização items',
+    classsesitems: [
+      {
+        id: '1',
+        title: '1 mês de curso'
+      },
+      {
+        id: '2',
+        title: '10 aulas'
+      },
+      {
+        id: '3',
+        title: '3x por semana'
+      }
+    ],
+    localizationitems: [
+      {
+        id: '1',
+        title: 'Mustache Barbearia'
+      },
+      {
+        id: '2',
+        title: 'Rua Visconde de Guarapuava, 173'
+      },
+      {
+        id: '3',
+        title: 'União da Vitória, PR'
+      }
+    ],
     preco: 'R$1500,00'
   },
   {
@@ -100,8 +126,34 @@ export default [
         title: 'Iluminação, tecnologia e ambiente'
       }
     ],
-    classsesitems: 'Aulas Items Avançado',
-    localizationitems: 'Localização items Avançado',
+    classsesitems: [
+      {
+        id: '4',
+        title: '1 mês de curso'
+      },
+      {
+        id: '5',
+        title: '10 aulas'
+      },
+      {
+        id: '6',
+        title: '3x por semana'
+      }
+    ],
+    localizationitems: [
+      {
+        id: '4',
+        title: 'Mustache Barbearia'
+      },
+      {
+        id: '5',
+        title: 'Rua Visconde de Guarapuava, 173'
+      },
+      {
+        id: '6',
+        title: 'União da Vitória, PR'
+      }
+    ],
     preco: 'R$499,90'
   }
 ]

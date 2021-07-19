@@ -8,7 +8,6 @@ import Gallery, { GalleryImageProps } from 'components/Gallery'
 import Cursos from 'components/Cursos'
 import { CursosInfoProps } from 'components/Cursos'
 import { NextSeo } from 'next-seo'
-import MediaMatch from 'components/MediaMatch'
 import Menu from 'components/Menu'
 
 export type HomeTemplateProps = {
@@ -19,50 +18,26 @@ export type HomeTemplateProps = {
 const Home = ({ gallery, curso }: HomeTemplateProps) => {
   return (
     <>
-      <MediaMatch greaterThan="medium">
-        <S.Wrapper>
-          <NextSeo
-            title="Mustache Barbearia"
-            description="Mustache barbearia, além do corte!"
-            canonical="https://mustachebarbearia.com"
-          />
-          <S.Content>
-            <Container>
-              <Menu />
-            </Container>
-            <Intro />
-            <Container>
-              <Cursos items={curso} />
-              <Cortes />
-              <Gallery items={gallery} />
-              <About />
-              <Formulario />
-            </Container>
-          </S.Content>
-        </S.Wrapper>
-      </MediaMatch>
-      <MediaMatch lessThan="medium">
-        <S.Wrapper>
-          <NextSeo
-            title="Mustache Barbearia"
-            description="Mustache barbearia, além do corte!"
-            canonical="https://mustachebarbearia.com"
-          />
-          <S.Content>
-            <Container>
-              <Menu />
-            </Container>
-            <Intro />
-            <Container>
-              <About />
-              <Cortes />
-              <Gallery items={gallery} />
-              <Cursos items={curso} />
-              <Formulario />
-            </Container>
-          </S.Content>
-        </S.Wrapper>
-      </MediaMatch>
+      <S.Wrapper>
+        <NextSeo
+          title="Mustache Barbearia"
+          description="Mustache barbearia, além do corte!"
+          canonical="https://mustachebarbearia.com"
+        />
+        <S.Content>
+          <Container>
+            <Menu />
+          </Container>
+          <Intro />
+          <Container>
+            <Cursos items={curso} />
+            <Cortes />
+            <Gallery items={gallery} />
+            <About />
+            <Formulario />
+          </Container>
+        </S.Content>
+      </S.Wrapper>
     </>
   )
 }

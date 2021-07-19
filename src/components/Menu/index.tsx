@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
-import Logo from 'components/Logo'
 import MediaMatch from 'components/MediaMatch'
 import * as S from './styles'
 
@@ -20,7 +19,7 @@ const Menu = () => {
       </MediaMatch>
 
       <S.LogoWrapper>
-        <Logo hideOnMobile />
+        <S.Logo src="https://mustache-barbearia.s3.sa-east-1.amazonaws.com/LOGO-BARBERSCHOOL-BRANCA.png" />
       </S.LogoWrapper>
 
       <S.MenuGroup>
