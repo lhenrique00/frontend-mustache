@@ -21,7 +21,7 @@ const Home = ({ gallery, curso }: HomeTemplateProps) => {
       <S.Wrapper>
         <NextSeo
           title="Mustache Barbearia"
-          description="Mustache barbearia, além do corte!"
+          description="Mustache barbearia / Barber School"
           canonical="https://mustachebarbearia.com"
         />
         <S.Content>
