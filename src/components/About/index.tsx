@@ -220,7 +220,7 @@ const About = () => {
         <S.SectionAbout>
           <S.Content>
             <S.Column>
-              <S.Heading ref={sobreTitleMobile}>Sobre</S.Heading>
+              <S.Heading ref={sobreTitleMobile}>Tragetoria</S.Heading>
               <S.Divider ref={dividerMobile}/>
               <div ref={sobreDescriptionMobile}>
                 <S.Description>
