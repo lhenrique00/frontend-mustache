@@ -45,11 +45,11 @@ export default [
       },
       {
         id: '10',
-        title: 'atendimento'
+        title: 'Atendimento'
       },
       {
         id: '11',
-        title: 'como conquistar seus clientes'
+        title: 'Como conquistar seus clientes'
       }
     ],
     classsesitems: [
@@ -59,7 +59,7 @@ export default [
       },
       {
         id: '2',
-        title: '10 aulas'
+        title: '12 aulas'
       },
       {
         id: '3',
