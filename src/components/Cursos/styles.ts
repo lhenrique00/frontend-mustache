@@ -2,15 +2,15 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const SectionCurse = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  margin-top: 15rem;
-  padding-bottom: 10rem;
-  align-items: center;
-  ${media.greaterThan('medium')`
-    margin-top: 25rem;
+  ${({ theme }) => css`
+    margin: 0 calc(-${theme.grid.gutter} / 2) ${theme.spacings.large};
+    margin-top: 10rem;
+    ${media.greaterThan('medium')`
+      margin-bottom: ${theme.spacings.large};
+      position: relative;
+      z-index: ${theme.layers.base};
+      margin-top: 20rem;
+    `}
   `}
 `
 
@@ -32,9 +32,13 @@ export const NonSelectedService = styled.div`
   position: relative;
   display: inline-flex;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 5rem;
   align-items: center;
   text-align: center;
+  ${media.lessThan('medium')`
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  `}
 `
 
 export const SelectedService = styled.div`
@@ -52,10 +56,12 @@ export const Info = styled.div`
   width: 100%;
   height: 100%;
   text-align: center;
+  align-items: center;
   margin: auto;
 `
 
 export const FooterCurso = styled.div`
+  margin: auto;
   display: inline-flex;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -65,16 +71,18 @@ export const FooterCurso = styled.div`
 export const Aulas = styled.div`
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.tertiary};
-    width: 50rem;
     border-radius: 20px 0px 0px 20px;
+    margin: 0;
+    width: 50%;
   `}
 `
 
 export const Localizacao = styled.div`
   ${({ theme }) => css`
     border: 1px solid ${theme.colors.tertiary};
-    width: 50rem;
     border-radius: 0px 20px 20px 0px;
+    margin: 0;
+    width: 50%;
   `}
 `
 
@@ -92,31 +100,76 @@ export const Image = styled.img`
   `}
 `
 
+export const Divider = styled.hr`
+  ${({ theme }) => css`
+    margin: ${theme.spacings.xsmall} auto ${theme.spacings.xsmall};
+    height: 0.1rem;
+    border: 1px solid white;
+
+    ${media.greaterThan('medium')`
+      margin: calc(${theme.spacings.small}  0.1) auto ${theme.spacings.small};
+    `}
+  `}
+`
+
 export const Title = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: 10vw;
+    line-height: ${theme.font.sizes.huge};
     font-weight: ${theme.font.normal};
-    padding-bottom: 5rem;
     color: ${theme.colors.tertiary};
     font-family: ${theme.font.familyTitle};
-    border-bottom: 1px solid white;
+    text-shadow: 10px 5px 15px #000000;
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.huge};
-      line-height: ${theme.font.sizes.large};
-      font-weight: ${theme.font.normal};
+      font-size: 4vw;
+      line-height: ${theme.font.sizes.huge};
+      font-weight: ${theme.font.light};
+    `}
+  `}
+`
+
+export const TitleFooter = styled.h3`
+  ${({ theme }) => css`
+    font-size: 7vw;
+    line-height: ${theme.font.sizes.huge};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.tertiary};
+    font-family: ${theme.font.familyTitle};
+    text-shadow: 10px 5px 15px #000000;
+    margin-top: 2rem;
+    ${media.greaterThan('medium')`
+      font-size: 2vw;
+      line-height: ${theme.font.sizes.huge};
+      font-weight: ${theme.font.light};
+      letter-spacing: 0.5rem;
     `}
   `}
 `
 
 export const Heading = styled.h3`
   ${({ theme }) => css`
-    font-size: 6vw;
+    font-size: 8vw;
     line-height: ${theme.font.sizes.huge};
     font-weight: ${theme.font.normal};
     color: ${theme.colors.tertiary};
     font-family: ${theme.font.familyTitle};
     text-shadow: 10px 5px 15px #000000;
-    margin-bottom: 1rem;
+    ${media.greaterThan('medium')`
+      font-size: 4vw;
+      line-height: ${theme.font.sizes.huge};
+      font-weight: ${theme.font.light};
+    `}
+  `}
+`
+
+export const Preco = styled.h3`
+  ${({ theme }) => css`
+    font-size: 12vw;
+    line-height: ${theme.font.sizes.huge};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.tertiary};
+    font-family: ${theme.font.familyTitle};
+    text-shadow: 10px 5px 15px #000000;
     ${media.greaterThan('medium')`
       font-size: 4vw;
       line-height: ${theme.font.sizes.huge};
@@ -128,7 +181,7 @@ export const Heading = styled.h3`
 export const ButtonText = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.small};
+    line-height: ${theme.font.sizes.large};
     font-weight: ${theme.font.normal};
     color: ${theme.colors.white};
     text-shadow: 0px 5px 10px #000000;
@@ -137,6 +190,29 @@ export const ButtonText = styled.h3`
       font-size: ${theme.font.sizes.medium};
       line-height: ${theme.font.sizes.large};
       font-weight: ${theme.font.bold};
+    `}
+  `}
+`
+
+export const Button = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    width: 25rem;
+    flex-wrap: wrap;
+    margin: 3rem;
+    margin-right: 10rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 2rem;
+    font-size: ${theme.font.sizes.medium};
+    font-weight: ${theme.font.normal};
+    font-family: ${theme.font.familyText};
+    cursor: pointer;
+
+    ${media.lessThan('medium')`
+      margin: 1rem;
+      margin-bottom: 2rem;
+      width: 15rem;
     `}
   `}
 `
@@ -180,12 +256,13 @@ export const CursoItemTitle = styled.div`
   ${({ theme }) => css`
     margin: auto;
     color: ${theme.colors.tertiary};
+    font-family: ${theme.font.familyText};
   `}
 `
 
 export const SubDescription = styled.h3`
   ${({ theme }) => css`
-    width: 30%;
+    width: 90%;
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.normal};
@@ -195,7 +272,6 @@ export const SubDescription = styled.h3`
     margin-top: 7rem;
     margin-bottom: 5rem;
     ${media.greaterThan('medium')`
-      width: auto;
       font-size: ${theme.font.sizes.xlarge};
       line-height: ${theme.font.sizes.large};
       font-weight: ${theme.font.normal};
@@ -214,29 +290,7 @@ export const Text = styled.h3`
     padding: 1rem;
     ${media.lessThan('medium')`
       font-size: ${theme.font.sizes.small};
-    `}
-  `}
-`
-
-export const Button = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    width: 25rem;
-    flex-wrap: wrap;
-    margin: 3rem;
-    margin-right: 10rem;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    padding: 2rem;
-    font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.normal};
-    font-family: ${theme.font.familyText};
-    cursor: pointer;
-
-    ${media.lessThan('medium')`
-      margin: auto;
-      margin-bottom: 2rem;
-      width: 15rem;
+      line-height: ${theme.font.sizes.huge};
     `}
   `}
 `

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import * as S from './styles'
 import { Container } from 'components/Container'
+import Link from 'next/link'
 export type CursosInfoProps = {
   title: string
   description: string
@@ -55,8 +56,9 @@ const Cursos = ({ items }: CursosProps) => {
   const [selectedButton, setSelectedButton] = useState(items[0].id)
   return (
     <Container>
-      <S.SectionCurse>
+      <S.SectionCurse id="cursos">
         <S.Title>Cursos</S.Title>
+        <S.Divider />
         <S.SectionService>
           <S.NonSelectedService>
             {items.map((item, index) => (
@@ -99,28 +101,30 @@ const Cursos = ({ items }: CursosProps) => {
             </div>
             <S.FooterCurso>
               <S.Aulas>
-                <S.Text>Aulas</S.Text>
+                <S.TitleFooter>Aulas</S.TitleFooter>
                 <S.Text>
                   {selectedClasssesitems.map((item) => (
-                    <>
+                    <div key={item.id}>
                       <S.Text>{item.title}</S.Text>
-                    </>
+                    </div>
                   ))}
                 </S.Text>
               </S.Aulas>
               <S.Localizacao>
-                <S.Text>Localização</S.Text>
+                <S.TitleFooter>Localização</S.TitleFooter>
                 <S.Text>
                   {selectedLocalizationitems.map((item) => (
-                    <>
+                    <div key={item.id}>
                       <S.Text>{item.title}</S.Text>
-                    </>
+                    </div>
                   ))}
                 </S.Text>
               </S.Localizacao>
             </S.FooterCurso>
-            <S.Heading>{selectedPreco}</S.Heading>
-            <S.ButtonInscrever>Inscrever-se</S.ButtonInscrever>
+            <S.Preco>{selectedPreco}</S.Preco>
+            <Link href="#inscreverse">
+              <S.ButtonInscrever>Inscrever-se</S.ButtonInscrever>
+            </Link>
           </S.Info>
         </S.SelectedService>
       </S.SectionCurse>

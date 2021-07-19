@@ -140,10 +140,10 @@ const About = () => {
   }, [initScrollAnimations])
 
   return (
-    <Container id="sobre" ref={containerRef}>
+    <Container id="tragetoria" ref={containerRef}>
       <MediaMatch greaterThan="medium">
         <S.SectionAbout >
-          <S.Heading ref={sobreTitle}>Sobre</S.Heading>
+          <S.Heading ref={sobreTitle}>Tragetória</S.Heading>
           <S.Divider ref={divider}/>
           <S.Content>
             <S.Column>

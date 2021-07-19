@@ -27,8 +27,8 @@ const Menu = () => {
           <Link href="/" passHref>
             <S.MenuLink>Home</S.MenuLink>
           </Link>
-          <Link href="#curso" passHref>
-            <S.MenuLink>Curso</S.MenuLink>
+          <Link href="#cursos" passHref>
+            <S.MenuLink>Cursos</S.MenuLink>
           </Link>
           <Link href="#tragetoria" passHref>
             <S.MenuLink>Tragetória</S.MenuLink>
@@ -45,8 +45,8 @@ const Menu = () => {
           <Link href="/" passHref>
             <S.MenuLink onClick={() => setIsOpen(false)}>Home</S.MenuLink>
           </Link>
-          <Link href="#curso" passHref>
-            <S.MenuLink onClick={() => setIsOpen(false)}>Curso</S.MenuLink>
+          <Link href="#cursos" passHref>
+            <S.MenuLink onClick={() => setIsOpen(false)}>Cursos</S.MenuLink>
           </Link>
           <Link href="#tragetoria" passHref>
             <S.MenuLink onClick={() => setIsOpen(false)}>Tragetória</S.MenuLink>
